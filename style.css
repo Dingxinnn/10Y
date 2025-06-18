@@ -1,0 +1,181 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.screen {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.screen.active {
+    display: block;
+}
+
+.welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.welcome-content h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.welcome-content button {
+    padding: 20px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    /* 圆角！ */
+    border: none;
+}
+
+.avatar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.avatar p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.menu {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu button {
+    display: block;
+    margin: 20px;
+    padding: 20px 60px;
+    font-size: 24px;
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    /* 圆角！ */
+    cursor: pointer;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* 透明度可以调 */
+    z-index: 0;
+}
+
+#main .avatar,
+#main .menu {
+    position: relative;
+    z-index: 1;
+}
+
+#main .avatar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+#main .avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#main .avatar p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+#main .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#main .menu button {
+    display: block;
+    margin: 20px;
+    padding: 20px 60px;
+    font-size: 24px;
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
