@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>10Y的小世界</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+
+    <!-- 欢迎页 -->
+    <div id="welcome" class="screen active">
+        <div class="welcome-content">
+            <h1>欢迎来到10Y的小世界</h1>
+            <button onclick="showScreen('main')">点击进入</button>
+        </div>
+    </div>
+
+    <!-- 主界面 -->
+    <div id="main" class="screen">
+        <div class="avatar">
+            <img src="images/user.png" alt="头像">
+            <p>社会这条路，我叫瑶姐你记住！！！</p>
+        </div>
+        <div class="menu">
+            <button onclick="showTravelMap()">旅行足迹</button>
+            <button onclick="showMoments()">精彩时刻</button>
+            <button onclick="showLifeGoals()">人生追求</button>
+
+        </div>
+    </div>
+
+    <!-- 旅行足迹 -->
+    <div id="travelMap" class="screen">
+        <div id="map"></div>
+        <button class="backBtn" onclick="showScreen('main')">⬅ 返回主界面</button>
+    </div>
+
+    <!-- 相册容器 -->
+    <div id="cityGalleries"></div>
+    <!-- 精彩时刻 相册 -->
+    <div id="momentsGallery" class="screen">
+        <button class="backBtn" onclick="showScreen('main')">⬅ 返回主界面</button>
+        <h1>精彩时刻 - 运动健将这一块./</h1>
+        <div class="gallery" id="momentsPhotos"></div>
+    </div>
+    <!-- 人生追求 相册 -->
+    <div id="lifeGoalsGallery" class="screen">
+        <button class="backBtn" onclick="showScreen('main')">⬅ 返回主界面</button>
+        <h1>人生追求 - 抽象与自由</h1>
+        <div class="gallery" id="lifeGoalsPhotos"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
